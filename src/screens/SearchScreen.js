@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import SearchBar from '../components/SearchBar';
 import useResults from '../hooks/useResults';
@@ -16,8 +16,12 @@ const SearchScreen = () => {
         onTermSubmit={() => searchApi(term)}
       />
       <Text>Results: {results.length}</Text>
+
       { errorMessage ? <Text>{errorMessage}</Text> : null }
-      <ResultsList results={results} />
+
+      <ResultsList title='Cost Effective' results={results} />
+      <ResultsList title='Bit Pricier' results={results} />
+      <ResultsList title='Big Spender' results={results} />
     </View>
   );
 };
