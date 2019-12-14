@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import SearchBar from '../components/SearchBar';
 import useResults from '../hooks/useResults';
+import ResultsList from '../components/ResultsList';
 
 const SearchScreen = () => {
   const [term, setTerm] = useState('');
@@ -16,12 +17,11 @@ const SearchScreen = () => {
       />
       <Text>Results: {results.length}</Text>
       { errorMessage ? <Text>{errorMessage}</Text> : null }
+      <ResultsList />
     </View>
   );
 };
 
-const styles = StyleSheet.create({
-
-});
+const styles = StyleSheet.create({});
 
 export default SearchScreen;
