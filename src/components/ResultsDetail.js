@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 
-const ResultsDetail = () => {
+const ResultsDetail = ({ result }) => {
   return(
     <View>
-      <Text>Results Detail Go Here</Text>
+      <Text>Name: {result.name} - Price {result.price}</Text>
     </View>
   );
 };
