@@ -17,7 +17,7 @@ const SearchScreen = () => {
       />
       <Text>Results: {results.length}</Text>
       { errorMessage ? <Text>{errorMessage}</Text> : null }
-      <ResultsList />
+      <ResultsList results={results} />
     </View>
   );
 };

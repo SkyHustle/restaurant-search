@@ -1,11 +1,21 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, FlatList } from 'react-native';
 
-const ResultsList = () => {
+const ResultsList = ({ results }) => {
   return(
-    <View>
-      <Text>Results List</Text>
-    </View>
+    <FlatList
+      horizontal={false}
+      showsHorizontalScrollIndicator={false}
+      data={results}
+      keyExtractor={(result) => result.name }
+      renderItem={( {item} ) => {
+        return (
+          <Text>
+            {item.name}
+          </Text>
+        );
+      }}
+    />
   );
 };
 
