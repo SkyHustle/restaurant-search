@@ -13,7 +13,7 @@ const ResultsList = ({ title, results }) => {
         renderItem={( {item} ) => {
           return (
             <Text>
-              {item.name}
+              Name: {item.name} - Price {item.price}
             </Text>
           );
         }}
