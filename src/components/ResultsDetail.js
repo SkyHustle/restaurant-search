@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, Button } from 'react-native';
 
-const ResultsDetail = ({ result, navigation }) => {
+const ResultsDetail = ({ result }) => {
   return(
     <View style={styles.container}>
       <Image
@@ -10,10 +10,6 @@ const ResultsDetail = ({ result, navigation }) => {
       />
       <Text style={styles.name}>{result.name}</Text>
       <Text>{result.rating} Stars, {result.review_count} Reviews</Text>
-      <Button
-        title="Results Screen"
-        onPress={() => navigation.navigate('ResultsShow')}
-      />
     </View>
   );
 };
